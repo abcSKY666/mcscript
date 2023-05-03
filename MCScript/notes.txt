@@ -1,0 +1,8 @@
+This is a library to connect Minecraft Servers
+Edition: Bedrock(BE)
+Version: 1.19.x
+
+Thanks:
+*** Github ***
+@pymine/mcstatus
+@Tnze/go-mc
