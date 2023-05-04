@@ -7,7 +7,7 @@
 </h1>
 <h3 align="center">Minecraft Script Library | Python</h3>
 <p align="center">
-    <strong><a href="CHANGELOG.md">Change Log</a></strong>
+    <strong><a href="https://www.">Change Log</a></strong>
     •
     <strong><a href="https://qm.qq.com/cgi-bin/qm/qr?k=RRgf17j1MSV2ajHHiVn_afaFsW7CMVIK&jump_from=webapi&authKey=W26MUk0kXqUfVOoxAd9BbkPk/GdXB1w7rf/DcjmzNOX3ID3gliMxiWPMRgYG/fXx">QQ</a></strong>
 </p>

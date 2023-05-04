@@ -1,0 +1,9 @@
+packets = {
+    "server": {
+        "request_status": b"\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x00\xfe\xfe\xfe\xfe\xfd\xfd\xfd\xfd\x124Vx",
+    },
+
+    "accounts": {
+        "login": ""
+    }
+}
