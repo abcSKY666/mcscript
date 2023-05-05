@@ -17,7 +17,7 @@ class Importer:
         """
         path请传入globals()
         """
-    
+        self.__context=path
     def Import(self,module,args=None):
         '''
             module为模块名所在路径(不需要.py后缀)，支持相对路径：
@@ -39,7 +39,7 @@ class Importer:
                 ②、import失败必然会抛出异常，这没得洗的。请注意自己的代码规范
                 ③、经常出现“鸡与蛋的先后问题”。请将该文件复制到要跨目录导入的脚本所在的目录下
         '''
-        absolutePath=os.path.split(self.__path['__file__'])[0]#调用该函数的文件所在的路径(绝对路径)
+        absolutePath = os.path.split(self.__context['__file__'])[0]#调用该函数的文件所在的路径(绝对路径)
         relativePath,__module=os.path.split(module)#模块所在目录(相对路径)、模块名
         path=os.path.join(absolutePath,relativePath)#模块所在路径(绝对路径)
         

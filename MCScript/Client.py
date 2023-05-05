@@ -4,8 +4,8 @@ import socket
 from dns import resolver
 
 # Locals
-from .packets.decode import *
-from .address import Address
+from packets.decode import *
+from foundation.address import Address
 from packets.id import packets
 
 class Client:
@@ -18,9 +18,6 @@ class Client:
         self.timeout = 3
         self.client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.client.settimeout(self.timeout)
-
-    
-        
     
     def writePackets(self, data):
         self.client.sendto(data, self.addr)

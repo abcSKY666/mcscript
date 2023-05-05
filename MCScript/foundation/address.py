@@ -7,7 +7,7 @@ from urllib.parse import urlparse
 
 from dns import resolver
 
-import mcstatus.dns
+# import mcstatus.dns
 
 if TYPE_CHECKING:
     from typing_extensions import Self

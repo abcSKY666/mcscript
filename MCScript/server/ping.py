@@ -13,23 +13,25 @@ from ModuleImporter import Importer
 try:
     from ..packets.id import packets
     from ..packets.decode import PacketDecode
+    from ..Client import Client
 except:
     pass
 
 mt = Importer(globals()) # Module Tools
 mt.Import("../packets/id", "packets") 
 mt.Import("../packets/decode", "PacketDecode")
+mt.Import("../Client", "Client")
 
-def ping(self):
+def ping(client: Client):
     try:
         start = perf_counter()
 
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.settimeout(self.timeout)
+        s.settimeout(client.timeout)
 
-        s.sendto(packets.server.request_status, self.addr)
+        s.sendto(packets.server.request_status, client.addr)
         data, _ = s.recvfrom(2048)
 
         return PacketDecode.decode(data, (perf_counter() - start))
     except Exception as err:
-        return Result
+        return 

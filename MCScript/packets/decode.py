@@ -5,6 +5,7 @@ class PacketDecode:
 
     def decode(data: bytes, latency: float) -> "PacketDecode.GameData":
         data = data[1:]
+        print(data)
         name_length = struct.unpack(">H", data[32:34])[0]
         decoded_data = data[34 : 34 + name_length].decode().split(";")
 
